@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useHeaderStore } from '../../state/slices/headerSlice';
 
 const Header: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { isScrolled, setScrolled } = useHeaderStore();
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setIsScrolled(true);
+      setScrolled(true);
     } else {
-      setIsScrolled(false);
+      setScrolled(false);
     }
   };
 
@@ -20,7 +21,8 @@ const Header: React.FC = () => {
 
   return (
     <header className={isScrolled ? 'header scrolled' : 'header'}>
-     <p>oritechbyte</p>
+      <h1>My Website</h1>
+      {/* Add navigation links here */}
     </header>
   );
 };

@@ -1,22 +1,18 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import SEO from './components/SEO';
-import Header from './components/Header';
-import Footer from './components/Footer';
-
-const Home = lazy(() => import('./pages/Home'));
-const About = lazy(() => import('./pages/About'));
+import Header from './components/Header/Header';
+import Footer from './components/Fotter/Footer';
+import HomePage from './pages/Home/HomePage';
+// import AboutPage from './pages/About/AboutPage'; // Assuming this page exists
 
 function App() {
   return (
     <Router>
       <Header />
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<><SEO title="Home" /><Home /></>} />
-          <Route path="/about" element={<><SEO title="About" /><About /></>} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        {/* <Route path="/about" element={<AboutPage />} /> */}
+      </Routes>
       <Footer />
     </Router>
   );
