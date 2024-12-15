@@ -1,30 +1,32 @@
-import React, { useEffect } from 'react';
-import { useHeaderStore } from '../../state/slices/headerSlice';
+import React from 'react'
+import Styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 const Header: React.FC = () => {
-  const { isScrolled, setScrolled } = useHeaderStore();
 
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  
+  // handle contect click
+  const handleContactClick = () => {
+    console.log('hanfle click')
+  }
 
   return (
-    <header className={isScrolled ? 'header scrolled' : 'header'}>
-      <h1>My Website</h1>
-      {/* Add navigation links here */}
+    <header className={Styles.header}>
+      {/* left side */}
+      <div>logo</div>
+      {/* center */}
+      <div className={Styles.headerLink}>
+        <Link to="/">Home</Link>
+        <Link to='/about'>About</Link>
+        <Link to='/blog'>blog</Link>
+        <Link to='/service'>service</Link>
+      </div>
+      {/* contact */}
+      <div onClick={handleContactClick}>
+        <Link to="/contact">Contact</Link>
+      </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
