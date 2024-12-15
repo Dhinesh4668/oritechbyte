@@ -1,43 +1,49 @@
-import React from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Fotter/Footer';
-import HomePage from './pages/Home/HomePage';
-import AboutPage from './pages/About/AboutPage';
 import { analytics } from './config/firebase.config';
 import { logEvent } from '@firebase/analytics';
 
+// Lazy-loaded components
+const HomePage = React.lazy(() => import('./pages/Home/HomePage'));
+const AboutPage = React.lazy(() => import('./pages/About/AboutPage'));
 
-
-// alalytics tracker
-const AnalyticsTracker = () => {
+// Analytics Tracker Component
+const AnalyticsTracker: React.FC = () => {
   const location = useLocation();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const logPageView = () => {
-      logEvent(analytics, "page_view", {
+      logEvent(analytics, 'page_view', {
         page_path: location.pathname,
       });
-    }
+    };
 
     logPageView();
-  },[location])
+  }, [location]);
 
   return null;
-}
+};
 
-const  App :React.FC = () =>  {
+// Main App Component
+const App: React.FC = () => {
   return (
     <Router>
       <AnalyticsTracker />
       <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <main style={{ flex: 1,  }}>
+        {/* Suspense wraps lazy-loaded components */}
+        <Suspense fallback={<div className="loading">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+          </Routes>
+        </Suspense>
+      </main>
       <Footer />
     </Router>
   );
-}
+};
 
 export default App;

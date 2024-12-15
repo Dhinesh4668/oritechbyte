@@ -1,0 +1,147 @@
+// Variables
+$color-background: #000000;
+$color-text: #ffffff;
+$color-gray: #aaaaaa;
+$color-primary: #fc5721;
+$color-hover: #f8ffcb;
+
+.footer {
+    background-color: $color-background;
+    color: $color-text;
+    padding: 40px 20px;
+    bottom: 0;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .leftSection {
+        max-width: 50%;
+
+        .brand {
+            font-size: 24px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            color: white;
+            span {
+                color: $color-primary;
+            }
+        }
+
+        .description {
+            margin: 20px 0;
+            color: $color-gray;
+            line-height: 1.6;
+        }
+
+        .contactInfo {
+            strong {
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            .link {
+                color: $color-primary;
+                text-decoration: none;
+
+                &:hover {
+                    color: $color-hover;
+                    transition: color 0.3s ease;
+                }
+            }
+        }
+    }
+
+    .rightSection {
+        max-width: 45%;
+
+        h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+            color: white
+        }
+
+        .subscribeForm {
+            display: flex;
+            gap: 10px;
+            background-color: $color-hover;
+            height: 70px;
+            .input {
+                flex: 1;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                font-size: 14px;
+            }
+
+            .input :active {
+                border: none;
+            }
+
+            .button {
+                margin: 10px;
+                padding: 10px 20px;
+                background-color: $color-primary;
+                color: $color-text;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                
+                &:hover {
+                    background-color: darken($color-primary, 10%);
+                }
+            }
+        }
+
+        .socialMedia {
+            margin-top: 20px;
+
+            p {
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+            .icons {
+                display: flex;
+                gap: 10px;
+
+                .icon {
+                    background-color: $color-gray;
+                    color: $color-background;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    text-decoration: none;
+                    font-size: 14px;
+                    font-weight: bold;
+
+                    &:hover {
+                        background-color: $color-primary;
+                        color: $color-text;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottomBar {
+        margin-top: 30px;
+        border-top: 1px solid $color-gray;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 12px;
+
+        strong {
+            color: $color-primary;
+        }
+    }
+}

@@ -22,8 +22,8 @@ const Header: React.FC = () => {
         <Link to='/service'>service</Link>
       </div>
       {/* contact */}
-      <div onClick={handleContactClick}>
-        <Link to="/contact">Contact</Link>
+      <div onClick={handleContactClick} className={Styles.contact}>
+        <Link style={{color: "white"}} to="/contact">Contact</Link>
       </div>
     </header>
   )
