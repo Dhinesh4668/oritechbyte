@@ -40,7 +40,6 @@ const HomePage: React.FC = () => {
             }}
           >
             <Button title="Get Started" />
-
             <Button title="Explore Services" varient />
           </div>
         </div>
@@ -48,6 +47,28 @@ const HomePage: React.FC = () => {
         <div>
           {/* image */}
           <img src={HeroImage} />
+        </div>
+      </div>
+
+      {/* service page */}
+      <div
+        style={{
+          height: '100vh',
+        }}
+      >
+        {/* title container */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            gap: '100px',
+            alignItems: 'center',
+          }}
+        >
+          <h1>
+            We are development experts on <br /> all technologies & platforms{' '}
+          </h1>
+          <Button title="Browse all services" />
         </div>
       </div>
     </>

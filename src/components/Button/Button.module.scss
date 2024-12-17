@@ -1,8 +1,8 @@
 @import '../../theme/variables';
 
 .buttonContainer {
-  height: 70px;
-  width: 140px;
+  min-height: 60px;
+  min-width: 140px;
   justify-content: center;
   align-items: center;
   background-color: $color-black;
@@ -21,7 +21,9 @@
   .title {
     color: white;
     text-align: center;
-    transition: color 0.3s ease-in-out; /* Smooth text color transition */
+    transition: color 0.3s ease-in-out;
+    font-size: $font-size-medium;
+    padding: 0px 10px;
   }
 }
 
@@ -32,7 +34,7 @@
   align-items: center;
   height: 70px;
   width: auto;
-  padding: 0 10px;
+  padding: 0px 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out; /* Smooth transition */
   transform: translateY(0); /* Initial position */
