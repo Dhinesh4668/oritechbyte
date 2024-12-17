@@ -2,11 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Onest:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 // Colors
-$color-primary: #FC5721; // Primary Accent
-$color-secondary: #F8FFCB; // Secondary Background
-$color-gray: #AAAAAA; // Gray
+$color-primary: #fc5721; // Primary Accent
+$color-secondary: #f8ffcb; // Secondary Background
+$color-gray: #aaaaaa; // Gray
 $color-black: #000000; // Black
-$color-light-gray: #F1F1F1; // Light Gray
+$color-light-gray: #f1f1f1; // Light Gray
+
+/* text color  */
+$text-secondary: #676767;
 
 // Font Sizes
 $font-size-small: 12px;
@@ -16,5 +19,5 @@ $font-size-large: 20px;
 $font-size-extra-large: 24px;
 
 // Font Families (Google Fonts)
-$font-family-primary: "Hubot Sans",sans-serif; 
-$font-family-secondary: "Public Sans",sans-serif;
+$font-family-primary: 'Hubot Sans', sans-serif;
+$font-family-secondary: 'Public Sans', sans-serif;

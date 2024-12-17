@@ -1,0 +1,56 @@
+@import '../../theme/variables';
+
+.buttonContainer {
+  height: 70px;
+  width: 140px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black;
+  display: flex;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  transform: translateY(0); /* Initial position */
+
+  &:hover {
+    background-color: $color-primary; /* Change background on hover */
+    transform: translateY(-2px); /* Slight up animation */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    transition: color 0.3s ease-in-out; /* Smooth text color transition */
+  }
+}
+
+.varientContainer {
+  border: 1px solid $color-black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: auto;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  transform: translateY(0); /* Initial position */
+
+  &:hover {
+    transform: translateY(-2px);
+    background-color: $color-primary;
+    border-color: $color-primary;
+    color: white;
+
+    .varientTitle {
+      color: wheat;
+    }
+  }
+
+  .varientTitle {
+    color: $color-black;
+    text-align: center;
+    transition: color 0.3s ease-in-out;
+  }
+}

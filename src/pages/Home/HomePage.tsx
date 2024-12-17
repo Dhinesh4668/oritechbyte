@@ -1,16 +1,57 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { HeroImage } from '../../assets';
+import Style from './HomePage.module.scss';
+import { Button } from '../../components';
 
-const HomePage :React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Home | oritechbyte</title>
-        <meta name="description" content="Welcome to the homepage of oritechbyte!" />
+        <meta
+          name="description"
+          content="Welcome to the homepage of oritechbyte!"
+        />
       </Helmet>
-    <div>HomePage</div>
-    </>
-  )
-}
+      {/* main container */}
+      <div className={Style.herocontainer}>
+        {/* left  */}
+        <div className={Style.leftContent}>
+          {/* main title */}
+          <h1>Building Tomorrow’s Software, Today</h1>
+          <p>
+            Transform your ideas into reality with our expert app and web
+            development solutions. At <span>oritechByte</span>, we specialize in
+            creating innovative, scalable, and user-centric applications across
+            all platforms, ensuring your business stays ahead in the digital
+            era.
+          </p>
+          <h1>Let’s Build the Future Together.</h1>
 
-export default HomePage
+          {/* buttons */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: '50px',
+              alignItems: 'center',
+              marginTop: '30px',
+            }}
+          >
+            <Button title="Get Started" />
+
+            <Button title="Explore Services" varient />
+          </div>
+        </div>
+        {/* right */}
+        <div>
+          {/* image */}
+          <img src={HeroImage} />
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default HomePage;

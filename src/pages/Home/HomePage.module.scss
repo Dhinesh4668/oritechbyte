@@ -1,0 +1,29 @@
+@import '../../theme/variables';
+
+.herocontainer {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  padding: 30px 30px;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+
+  /* left content */
+  .leftContent {
+    width: 40%;
+  }
+
+  p {
+    color: $text-secondary;
+    font-size: 19px;
+    text-align: justify;
+    font-weight: 400;
+  }
+
+  h1 {
+    color: $color-black;
+    font-size: $font-size-extra-large;
+    font-weight: 800;
+  }
+}
