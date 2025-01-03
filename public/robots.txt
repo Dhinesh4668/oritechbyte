@@ -6,4 +6,4 @@ Disallow: /node_modules/
 Disallow: /dist/
 
 # Sitemap location
-Sitemap: https://www.yourwebsite.com/sitemap.xml
+Sitemap: https://www.my-startup-c4f7f.web.app/sitemap.xml

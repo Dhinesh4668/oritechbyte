@@ -70,6 +70,7 @@ const HomePage: React.FC = () => {
           </h1>
           <Button title="Browse all services" />
         </div>
+        {/*  */}
       </div>
     </>
   );
