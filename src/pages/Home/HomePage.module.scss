@@ -8,7 +8,10 @@
   justify-content: center;
   align-items: center;
   gap: 10rem;
-
+  background: #f0ebff;
+  margin: 0px 60px 0px 60px;
+  border-radius: 10px;
+  /* border-bottom: 0.5 solid black; */
   /* left content */
   .leftContent {
     width: 40%;
@@ -25,5 +28,46 @@
     color: $color-black;
     font-size: $font-size-extra-large;
     font-weight: 800;
+  }
+}
+
+.whoweareContainer {
+  background-color: $color-black;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 30px 15px;
+  height: 40vh;
+
+  .leftContainer {
+    width: 40%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      color: white;
+      font-weight: 700;
+      font-size: $font-size-medium;
+      font-size: 32px;
+    }
+
+    .areButton {
+      padding: 5px 18px;
+      background-color: $color-primary;
+      rotate: -8deg;
+    }
+  }
+
+  .rightContainer {
+    width: 60%;
+    display: flex;
+    align-self: center;
+    .content {
+      color: white;
+      text-align: justify;
+    }
   }
 }

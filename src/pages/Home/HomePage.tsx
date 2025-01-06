@@ -19,7 +19,18 @@ const HomePage: React.FC = () => {
         {/* left  */}
         <div className={Style.leftContent}>
           {/* main title */}
-          <h1>Building Tomorrow’s Software, Today</h1>
+          <h1 style={{ display: 'flex', gap: 20, alignItems: 'center' }}>
+            Building Tomorrow’s Software,
+            <h1
+              style={{
+                padding: `5px 20px`,
+                background: '#5F28FD',
+                color: 'white',
+              }}
+            >
+              Today
+            </h1>
+          </h1>
           <p>
             Transform your ideas into reality with our expert app and web
             development solutions. At <span>oritechByte</span>, we specialize in
@@ -50,28 +61,46 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-      {/* service page */}
-      <div
-        style={{
-          height: '100vh',
-        }}
-      >
-        {/* title container */}
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            gap: '100px',
-            alignItems: 'center',
-          }}
-        >
-          <h1>
-            We are development experts on <br /> all technologies & platforms{' '}
-          </h1>
-          <Button title="Browse all services" />
+      {/* out brand marquee */}
+
+      {/* who we are  */}
+      <div className={Style.whoweareContainer}>
+        <div className={Style.leftContainer}>
+          <p>Who</p>
+          <p
+            style={{
+              display: 'flex',
+              gap: 10,
+              marginTop: 5,
+              justifyContent: 'center',
+            }}
+          >
+            <p className={Style.areButton}>We</p>
+            Are
+          </p>
         </div>
-        {/*  */}
+        <div className={Style.rightContainer}>
+          <p className={Style.content}>
+            At OriTechByte FreelanceCommunity, we are a dynamic team of skilled
+            IT professionals passionate about empowering businesses to thrive in
+            the digital age. With expertise spanning web development, mobile app
+            development, UI/UX design, and cutting-edge technologies, we
+            specialize in creating robust, scalable, and user-centered solutions
+            tailored to your unique needs.
+            <br />
+            <br />
+            Whether you're a startup looking to build your foundation or an
+            established enterprise aiming to optimize operations, our mission is
+            to turn your vision into reality. We leverage the latest tools and
+            technologies to deliver high-quality, cost-effective solutions that
+            drive growth and innovation. <br /> <br />
+            Looking for a trusted IT partner to transform your ideas into
+            impactful digital solutions? Let’s collaborate and take your
+            business to new heights!
+          </p>
+        </div>
       </div>
+      {/* service page */}
     </>
   );
 };

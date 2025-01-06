@@ -17,7 +17,7 @@ const Button: React.FC<Props> = ({
       onClick={onPress}
       className={varient ? Style.varientContainer : Style.buttonContainer}
     >
-      <p className={varient ? Style.varientTitle : Style.title}>{title}</p>
+      <h6 className={varient ? Style.varientTitle : Style.title}>{title}</h6>
     </div>
   );
 };
