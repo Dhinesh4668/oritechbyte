@@ -1,10 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { HeroImage } from '../../assets';
+import { HeroImage, MobileDevIcon } from '../../assets';
 import Style from './HomePage.module.scss';
 import { Button } from '../../components';
+import { useNavigate } from 'react-router-dom';
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate();
   return (
     <>
       <Helmet>
@@ -50,8 +52,10 @@ const HomePage: React.FC = () => {
               marginTop: '30px',
             }}
           >
-            <Button title="Get Started" />
-            <Button title="Explore Services" varient />
+            <Button
+              title="Let's talk 💼"
+              onPress={() => window.open('tel:9150507538')}
+            />
           </div>
         </div>
         {/* right */}
@@ -100,7 +104,52 @@ const HomePage: React.FC = () => {
           </p>
         </div>
       </div>
+
       {/* service page */}
+      <div>
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            padding: '0px 60px',
+            margin: '10px 0px',
+          }}
+        >
+          <div>
+            <p style={{ lineHeight: 2.5, fontWeight: '600' }}>
+              We are development experts on all <br /> technologies &{' '}
+              <span
+                style={{
+                  padding: 10,
+                  backgroundColor: '#5f28fd',
+                  color: 'white',
+                }}
+              >
+                Platforms
+              </span>
+            </p>
+          </div>
+          <Button
+            title="Browse all Service 🖱️"
+            onPress={() => navigate('/servise')}
+          />
+        </div>
+        {/* card */}
+        <div>
+          <div>
+            {/* icon */}
+            <img src={MobileDevIcon} />
+            {/* title */}
+            <p>Developing Products</p>
+            {/* sub title */}
+            <p>
+              Building responsive, robust, and scalable websites tailored to
+              your needs.
+            </p>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
